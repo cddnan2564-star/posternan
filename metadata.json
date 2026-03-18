@@ -1,0 +1,5 @@
+{
+  "name": "AI Product Poster Generator",
+  "description": "An application that transforms product images into professional advertisement posters using AI. Users can upload an image, provide a product name and slogan, and generate a unique poster.",
+  "requestFramePermissions": []
+}
