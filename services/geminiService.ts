@@ -1,13 +1,18 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 import type { ImageFile } from '../types';
 
-const API_KEY = process.env.API_KEY;
+let aiInstance: GoogleGenAI | null = null;
 
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable is not set");
-}
-
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+const getAI = () => {
+  if (!aiInstance) {
+    const API_KEY = process.env.API_KEY || process.env.GEMINI_API_KEY;
+    if (!API_KEY) {
+      throw new Error("API_KEY environment variable is not set. Please set GEMINI_API_KEY in your environment variables.");
+    }
+    aiInstance = new GoogleGenAI({ apiKey: API_KEY });
+  }
+  return aiInstance;
+};
 
 export const generatePoster = async (
   productImage: ImageFile,
@@ -16,6 +21,7 @@ export const generatePoster = async (
   style: string
 ): Promise<string> => {
   try {
+    const ai = getAI();
     const prompt = `
       Transform the following product image into a professional, eye-catching advertisement poster with a "${style}" theme.
 
