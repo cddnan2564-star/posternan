@@ -80,7 +80,7 @@ const App: React.FC = () => {
       <header className="py-6 bg-white/60 backdrop-blur-md sticky top-0 z-10 border-b border-pink-100">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-black text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-sky-500 tracking-tight">
-            AI Poster Magic ✨
+            AI POSTER CDDNAN
           </h1>
           <p className="text-center text-slate-500 mt-2 font-medium">
             เปลี่ยนภาพสินค้าธรรมดาให้เป็นโปสเตอร์โฆษณาสุดปัง!
@@ -190,11 +190,11 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            <div className="pt-6">
+            <div className="pt-4">
               <button
                 onClick={handleGeneratePoster}
                 disabled={!productImage || !productName || !slogan || isLoading}
-                className="w-full flex items-center justify-center soft-gradient hover:opacity-90 text-white font-black text-xl py-5 px-6 rounded-2xl shadow-xl shadow-pink-200 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+                className="w-full flex items-center justify-center soft-gradient hover:opacity-90 text-white font-bold text-lg py-3 px-6 rounded-xl shadow-lg shadow-pink-100 transition-all duration-300 transform hover:scale-[1.01] active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
               >
                 {isLoading ? (
                   <>
@@ -277,7 +277,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="text-center py-8 text-slate-400 text-sm mt-10 border-t border-slate-100">
-        <p className="font-medium">✨ สร้างสรรค์ด้วยความรักและ AI (Google Gemini) ✨</p>
+        <p className="font-medium">จัดทำโดย DARANPHOP LAOHAWICHAYAKUL</p>
       </footer>
     </div>
   );
