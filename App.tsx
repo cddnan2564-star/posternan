@@ -190,11 +190,11 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center">
               <button
                 onClick={handleGeneratePoster}
                 disabled={!productImage || !productName || !slogan || isLoading}
-                className="w-full flex items-center justify-center soft-gradient hover:opacity-90 text-white font-bold text-lg py-3 px-6 rounded-xl shadow-lg shadow-pink-100 transition-all duration-300 transform hover:scale-[1.01] active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+                className="w-full max-w-[220px] flex items-center justify-center bg-gradient-to-r from-pink-500 to-sky-500 hover:from-pink-600 hover:to-sky-600 text-white font-black text-xl py-2.5 px-6 rounded-2xl shadow-xl shadow-pink-200/50 transition-all duration-300 transform hover:scale-[1.05] active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
               >
                 {isLoading ? (
                   <>
